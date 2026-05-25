@@ -7,9 +7,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green:   #2d6a4f;
+  --green:   #5cd6d6;
   --green-lt:#52b788;
-  --cream:   #f8f4ec;
+  --grey:   #e6e6e6;
   --dark:    #1a1a2e;
   --mid:     #555;
   --border:  #ddd;
@@ -18,7 +18,7 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
+  background: var(--grey);
   color: var(--dark);
   padding: 30px 16px 60px;
 }
