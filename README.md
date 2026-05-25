@@ -11,7 +11,7 @@
 
 **ADD CODE (2 files)**
 1. schema.sql - add missing column
-2. public/index.html - adding missing <label> + <input> for student_id in the form
+2. public/index.html - add missing <label> + <input> for student_id in the form
 
 After you have completed the above, log into Render.com
 1. Create a PostgreSQL database
