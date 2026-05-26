@@ -10,13 +10,13 @@
 //
 // ============================================================
 
-// SECTION 1 — add your comment here:
+// SECTION 1 — This section loads the required node.js modules for any database connections  :
 const { Pool } = require("pg");
 const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
 
-// SECTION 2 — add your comment here:
+// SECTION 2 — a:
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },
