@@ -16,7 +16,7 @@ const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
 
-// SECTION 2 — a:
+// SECTION 2 — this section :
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },
