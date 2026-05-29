@@ -16,7 +16,7 @@ const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
 
-// SECTION 2 — this section :
+// SECTION 2 — this section has a constant that creates the database connection using the URL configuration :
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },
