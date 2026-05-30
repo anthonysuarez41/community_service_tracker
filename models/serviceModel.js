@@ -13,7 +13,9 @@
 // ============================================================
 
 const db = require('../db');
-
+// 1. it gathers all community service records from the database, which is followed by the order of the data activity. 
+// 2. no parameters 
+// 3. it returns a row of objects that represent all service records
 // COMMENT FOR getAllRecords:
 const getAllRecords = async () => {
   const res = await db.query(
