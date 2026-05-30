@@ -25,6 +25,9 @@ const getAllRecords = async () => {
 };
 
 // COMMENT FOR addRecord:
+// 1. it saves a community service record onto the database 
+// 2. Student_name, Student_id, activity_date, Hours, Recipient, so 5 in total.
+// 3. it returns a  record of students' names, ID, the hours, etc. 
 const addRecord = async (student_name, student_id, activity_date, hours, recipient) => {
   const res = await db.query(
     `INSERT INTO service_records
@@ -37,6 +40,9 @@ const addRecord = async (student_name, student_id, activity_date, hours, recipie
 };
 
 // COMMENT FOR getHoursByStudent:
+// 1. This one calculates the total hours for each Student and sorts them alphabetically by name. 
+// 2. no parameters. 
+// 3. It returns a row from a list that can contain a student's name, their ID, and the total number of hours they have. 
 const getHoursByStudent = async () => {
   const res = await db.query(
     `SELECT student_name, student_id, SUM(hours) AS total_hours
