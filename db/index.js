@@ -16,17 +16,17 @@ const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
 
-// SECTION 2 — this section has a constant that creates the database connection using the URL configuration :
+// SECTION 2 — This section has a constant that creates the database connection using the URL configuration :
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },
 });
 
-// SECTION 3 — add your comment here:
+// SECTION 3 — it locates the schema.sql file path and reads it as a text string. :
 const schemaPath = path.join(__dirname, "schema.sql");
 const schema = fs.readFileSync(schemaPath, "utf8");
 
-// SECTION 4 — add your comment here:
+// SECTION 4 — : it runs the scheme script, so it can build the database tables and uses the console logs to gather the results
 (async () => {
   try {
     await pool.query(schema);
