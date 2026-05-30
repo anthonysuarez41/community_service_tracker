@@ -36,5 +36,5 @@ const schema = fs.readFileSync(schemaPath, "utf8");
   }
 })();
 
-// SECTION 5 — add your comment here:
+// SECTION 5 — it begins to export the connection pool so other files in the app can query the database:
 module.exports = pool;
