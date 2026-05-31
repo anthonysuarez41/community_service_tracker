@@ -31,12 +31,12 @@ document.getElementById("serviceForm").addEventListener("submit", async (e) => {
   const activity_date = document.getElementById("activity_date").value;
   const hours         = document.getElementById("hours").value;
   const recipient     = document.getElementById("recipient").value;
-
+const organization  = document.getElementById("organization").value; 
   const res = await fetch("/api/service", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     // BUG 1 is inside the object below (one field is missing)
-    body: JSON.stringify({ student_name, student_id, activity_date, hours, recipient }),
+    body: JSON.stringify({ student_name, student_id, activity_date, hours, recipient, organization }),
   });
 
   const msg = document.getElementById("formMessage");
