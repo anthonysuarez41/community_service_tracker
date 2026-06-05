@@ -15,7 +15,7 @@ app.use("/api/service", serviceRouter);
 app.use(express.static(path.join(__dirname, "public")));
 
 // Fallback: any unknown route serves index.html
-app.get(*splat, (req, res) => {
+app.get("*splat", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
